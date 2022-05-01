@@ -6,7 +6,7 @@ This is a simple ToDo app created in Angular js which inclues Login, addtask, de
 
 ToDo app also have a login feature. If the user enters 'admin',  'admin' ad username and password then s/he can see all the details pending task.
 
-![Screenshot from 2022-05-01 22-01-38](https://user-images.githubusercontent.com/83533427/166155325-2aaa6f14-1e23-481b-9388-af8433d412c8.png)]
+![Screenshot from 2022-05-01 22-01-38](https://user-images.githubusercontent.com/83533427/166155325-2aaa6f14-1e23-481b-9388-af8433d412c8.png)
 
 # Tasks
 
