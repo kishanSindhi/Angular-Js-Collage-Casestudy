@@ -19,22 +19,24 @@
         <center>
             <div class="justify-conntent-center border bg-light" style="width:23rem;">
                     <h1>Login</h1>
-                    <form ng-init="login = 0" style="width:22rem;" >
+                    <form ng-init="login = 0" style="width:22rem;" name="login">
                         <div class="form-outline mb-4">
-                            <input type="text" class="form-control" placeholder="Username" ng-model="uname"/>
+                            <input type="text" class="form-control" placeholder="Username" ng-model="uname" required name="uname" id="uname"/>
                         </div>
-                        
+                        <div ng-show="login.uname.$error.required" class="text-danger">*</div>  
                         <div class="form-outline mb-4">
-                            <input type="password" class="form-control" placeholder="Password" ng-model="pass"/>
-                        </div>          
-                        
+                            <input type="password" class="form-control" placeholder="Password" ng-model="pass" required name="pwd" id="pwd" />
+                        </div>
+                        <div ng-show="login.pwd.$error.required" class="text-danger">*</div>
                             <button type="button" class="btn btn-primary btn-block mb-4" ng-click="login = 1">Login</button>
                     </form>
+
                 </div>
             </center>
+            <br><br>
                 <!-- todo app main -->
                 <div ng-if="login == 1 && uname=='admin' && pass=='admin'">
-                    <h1 ng-click="">ToDo List</h1>
+                    <center><h1 ng-click="">ToDo List</h1></center>
                     <ul>
                         <li ng-repeat="task in tasks | orderBy:'+priority' track by $index"> 
                             <input type="checkbox" name="completed" id="completed" ng-model="completed">
