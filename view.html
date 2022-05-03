@@ -47,8 +47,10 @@
                         </li> 
                     </ul>
                 <center>
-                    <input type="text" ng-model="title" class="form-control" placeholder="Enter Title" style="width:30rem;"> <br>
-                    <select ng-model="priority">
+                    <form name="task">
+                    <input type="text" ng-model="title" class="form-control" placeholder="Enter Title" style="width:30rem;" required name="title" id="title" > <br> 
+                    <div ng-show="task.title.$error.required" class="text-danger">*</div>  
+                    <select ng-model="priority" required>
                         <option value="">--Priority--</option>
                         <option value="1">High</option>
                         <option value="2">Medium</option>
@@ -56,6 +58,7 @@
                     </select>
                     <button class="btn btn-success" ng-click="addTask(title, priority)">Add</button>
                     <button ng-click="undo()" class="btn btn-warning">Undo</button> 
+                </form>
                 </div>
             </div>
         </center>
